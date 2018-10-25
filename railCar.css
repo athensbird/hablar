@@ -80,6 +80,11 @@ h2, #form {
     width: 15%;
 }
 
+#voice, #mute{
+    border: none;
+    background: none;
+}
+
 button:hover {
     cursor: pointer;
     opacity: 0.5;

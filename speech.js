@@ -30,50 +30,53 @@ function navigate() {
 
     recognizer.recognizeOnceAsync(
         function (result) {
-            const path = result.text;
-
+            let path = result.text;
+            if (path && path.slice(-1) === '.') {
+                path = path.slice(0, -1);
+            }
+            console.log(path);
             switch (path) {
-                case "Go to page one.": {
+                case "Go to page one": {
                     window.location.href = "railCar1.html";
                     recognizer.close();
                     break;
                 }
-                case "Go to page 2.": {
+                case "Go to page 2": {
                     window.location.href = "railCar2.html";
                     recognizer.close();
                     break;
                 }
-                case "Go to page 3.": {
+                case "Go to page 3": {
                     window.location.href = "railCar3.html";
                     recognizer.close();
                     break;
                 }
-                case "Go back.": {
+                case "Go back": {
                     window.location.href = "index.html";
                     recognizer.close();
                     break;
                 }
-                case "Type.": {
+                case "Type": {
                     populate("carType");
                     break;
                 }
-                case "Damaged.": {
+                case "Damaged": {
                     checkDamaged();
                     break;
                 }
-                case "Container one.": {
+                case "Container one": {
                     populate("container1");
                     break;
                 }
-                case "Container 2.": {
+                case "Container 2": {
                     populate("container2");
                     break;
                 }
-                case "Submit.": {
+                case "Submit": {
                     $("#form").submit();
                     break;
                 }
-                case "Stop.": {
+                case "Stop": {
                     recognizer.close();
                     break;
                 }
@@ -103,7 +106,10 @@ function populate(field) {
 
     recognizer.recognizeOnceAsync(
         function(result) {
-            const value = result.text;
+            let value = result.text;
+            if (value.slice(-1) === '.') {
+                value = value.slice(0, -1);
+            }
             $(id).val(value);
             console.log(value);
             navigate();
