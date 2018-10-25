@@ -1,0 +1,86 @@
+body {
+    font-family: system-ui;
+    font-weight: 300;
+    font-size: 1.5rem;
+    background-image: url("/image/train.jpg");
+    background-size: cover;
+}
+
+form {
+    background-color: white;
+    margin: 5rem auto 1rem auto;
+    padding-bottom: 5rem;
+    width: 40%;
+    opacity: 0.8;
+}
+
+div {
+    margin: 1rem 0.5rem;
+}
+
+input {
+    width: 40%;
+}
+
+input[type="checkbox"] {
+    width: 2%;
+}
+
+label {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+h2, #form {
+    margin: 1rem auto;
+    text-align: center;
+    font-weight: 300;
+}
+
+.container {
+    display: flex;
+    margin-left: 3.9rem;
+}
+
+#actions {
+    border-top: 1px gray solid;
+    display: flex;
+    justify-content: center;
+}
+
+#header {
+    padding: 1rem 0;
+    border-bottom: 1px gray solid;
+    font-weight: 400;
+}
+
+#subheader {
+    font-family: system-ui;
+    font-weight: 300;
+}
+
+#home {
+    border: none;
+    display: flex;
+    background-color: white;
+    opacity: 0.8;
+    height: 2rem;
+    margin: 0.5rem auto;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: system-ui;
+}
+
+#home:hover {
+    cursor: pointer;
+}
+
+#saveButton, #cancelButton{
+    margin: 0.5rem;
+    width: 15%;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
