@@ -73,7 +73,7 @@ function navigate() {
                     break;
                 }
                 case "Submit": {
-                    $("#form").submit();
+                    alert("Your information has been submitted!");
                     break;
                 }
                 case "Stop": {
