@@ -19,7 +19,7 @@ div:not(#actions) {
 h2 {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     border-bottom: 1px gray solid;
     padding-bottom: 1rem;
     margin: 1rem auto;
@@ -45,8 +45,8 @@ button:hover {
     opacity: 0.6;
 }
 
-i {
-    margin-right: 1.5rem;
+img {
+    margin-right: 1rem;
 }
 
 #actions {

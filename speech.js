@@ -9,7 +9,7 @@ speechConfig.speechRecognitionLanguage = "en-US";
 
 function unmute() {
     muted = false;
-    alert("unmuted");
+    const notification = new Notification("unmuted");
     navigate();
 }
 
@@ -17,12 +17,11 @@ function muteMic() {
     if (recognizer) {
         // recognizer.close();
         muted = true;
-        alert("muted");
+        const notification = new Notification("muted");
     }
 }
 
 function navigate() {
-    console.log(muted);
     if (muted === true) {
         return;
     }
