@@ -2,7 +2,7 @@ const subscriptionKey = "e58572e8cfbd438a9ac0f900fe9aa802";
 const regionKey = "northeurope";
 let SpeechSDK = window.SpeechSDK;
 let recognizer;
-let muted = true;
+let muted = false;
 
 const speechConfig = SpeechSDK.SpeechConfig.fromSubscription(subscriptionKey, regionKey);
 speechConfig.speechRecognitionLanguage = "en-US";
@@ -20,7 +20,6 @@ function muteMic() {
 }
 
 function navigate() {
-    console.log("navigating");
     console.log(muted);
     if (muted === true) {
         return;
@@ -36,54 +35,45 @@ function navigate() {
             }
             console.log(path);
             switch (path) {
-                case "Railcar one": {
+                case "Railcar one": 
                     window.location.href = "railCar1.html";
                     recognizer.close();
                     break;
-                }
-                case "Railcar 2": {
+                case "Railcar 2": 
                     window.location.href = "railCar2.html";
                     recognizer.close();
                     break;
-                }
-                case "Railcar 3": {
+                case "Railcar 3": 
                     window.location.href = "railCar3.html";
                     recognizer.close();
                     break;
-                }
-                case "Go back": {
+                case "Go back": 
                     window.location.href = "index.html";
                     recognizer.close();
                     break;
-                }
-                case "Type": {
+                case "Type": 
                     populate("carType");
                     break;
-                }
-                case "Damaged": {
+                case "Damaged": 
                     checkDamaged();
                     break;
-                }
-                case "Container one": {
+                case "Container one": 
                     populate("container1");
                     break;
-                }
-                case "Container 2": {
+                case "Container 2": 
+                case "Container too":
                     populate("container2");
                     break;
-                }
-                case "Submit": {
+                case "Submit": 
                     alert("Your information has been submitted!");
+                    muted = true;
                     break;
-                }
-                case "Stop": {
+                case "Stop": 
                     recognizer.close();
                     break;
-                }
-                default: {
+                default: 
                     alert("Please say a valid command");
                     navigate();
-                }
             }
         },
         function (err) {
