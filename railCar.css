@@ -9,7 +9,7 @@ body {
 form {
     background-color: white;
     margin: 5rem auto 1rem auto;
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
     width: 60%;
     opacity: 0.8;
 }
@@ -34,7 +34,7 @@ label {
 }
 
 h2, #form {
-    margin: 1rem auto;
+    margin: 2rem auto;
     text-align: center;
     font-weight: 300;
 }
@@ -93,3 +93,24 @@ button:hover {
     cursor: pointer;
     opacity: 0.5;
 }
+
+@media screen and (max-width: 960px) {
+    .container {
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        margin-left: 3.2rem;
+    }
+    #saveButton, #cancelButton {
+        margin: 0.3rem 0.5rem;
+    }
+    #carType {
+        width: 20%;
+    }
+}
+
+
+

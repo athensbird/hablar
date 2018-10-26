@@ -12,8 +12,8 @@ div:not(#actions) {
     background-color: white;
     opacity: 0.9;
     width: 60%;
-    margin: 5rem auto 1rem auto;
-    padding-bottom: 5rem;
+    margin: 2rem auto 1rem auto;
+    padding-bottom: 2rem;
 }
 
 h2 {
@@ -66,4 +66,10 @@ i {
 
 #mute {
     margin-right: auto;
+}
+
+@media screen and (max-width: 640px) {
+    div:not(#actions) {
+        width: 80%;
+    }
 }
