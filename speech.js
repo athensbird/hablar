@@ -36,17 +36,17 @@ function navigate() {
             }
             console.log(path);
             switch (path) {
-                case "Go to page one": {
+                case "Railcar one": {
                     window.location.href = "railCar1.html";
                     recognizer.close();
                     break;
                 }
-                case "Go to page 2": {
+                case "Railcar 2": {
                     window.location.href = "railCar2.html";
                     recognizer.close();
                     break;
                 }
-                case "Go to page 3": {
+                case "Railcar 3": {
                     window.location.href = "railCar3.html";
                     recognizer.close();
                     break;

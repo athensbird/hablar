@@ -66,15 +66,15 @@
         if (authorizationToken) {
           speechConfig = SpeechSDK.SpeechConfig.fromAuthorizationToken(authorizationToken, regionKey.value);
         } else {
-          if (subscriptionKey.value === "" || subscriptionKey.value === "subscription") {
-            alert("Please enter your Microsoft Cognitive Services Speech subscription key!");
-            return;
-          }
-          console.log(subscriptionKey.value);
+          // if (subscriptionKey.value === "" || subscriptionKey.value === "subscription") {
+          //   alert("Please enter your Microsoft Cognitive Services Speech subscription key!");
+          //   return;
+          // }
           speechConfig = SpeechSDK.SpeechConfig.fromSubscription(subscriptionKey.value, regionKey.value);
+          speechConfig = SpeechSDK.SpeechConfig.fromSubscription("e58572e8cfbd438a9ac0f900fe9aa802", "northeurope");
         }
   
-        speechConfig.speechRecognitionLanguage = "en-US";
+        speechConfig.speechRecognitionLanguage = "es-ES";
         var audioConfig  = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();
         recognizer = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig);
   

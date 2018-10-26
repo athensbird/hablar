@@ -10,7 +10,7 @@ form {
     background-color: white;
     margin: 5rem auto 1rem auto;
     padding-bottom: 5rem;
-    width: 40%;
+    width: 60%;
     opacity: 0.8;
 }
 
@@ -20,6 +20,8 @@ div {
 
 input {
     width: 40%;
+    border: none;
+    border-bottom: 1px gray solid;
 }
 
 input[type="checkbox"] {
@@ -39,7 +41,7 @@ h2, #form {
 
 .container {
     display: flex;
-    margin-left: 3.9rem;
+    margin-left: 8.5rem;
 }
 
 #actions {
@@ -76,8 +78,10 @@ h2, #form {
 }
 
 #saveButton, #cancelButton{
-    margin: 0.5rem;
+    margin: 0.3rem;
     width: 15%;
+    border: none;
+    font-size: 1rem;
 }
 
 #voice, #mute{
