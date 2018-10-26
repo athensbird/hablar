@@ -9,6 +9,7 @@ speechConfig.speechRecognitionLanguage = "en-US";
 
 function unmute() {
     muted = false;
+    alert("unmuted");
     navigate();
 }
 
@@ -16,6 +17,7 @@ function muteMic() {
     if (recognizer) {
         // recognizer.close();
         muted = true;
+        alert("muted");
     }
 }
 
@@ -72,7 +74,7 @@ function navigate() {
                     recognizer.close();
                     break;
                 default: 
-                    alert("Please say a valid command");
+                    // alert("Please say a valid command");
                     navigate();
             }
         },
