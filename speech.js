@@ -67,7 +67,12 @@ function navigate() {
                     populate("container2");
                     break;
                 case "Submit": 
-                    alert("Your information has been submitted!");
+                    window.Notification.requestPermission();
+                    const notification = new Notification("Successfully submitted", {body: "Successfully submitted"});
+                    setTimeout(function() {
+                        notification.close();
+                        window.location.href = "index.html";
+                    }, 3000);
                     muted = true;
                     break;
                 case "Stop": 
